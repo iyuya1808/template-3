@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- このファイルの用途: ギャラリーページ（店内・料理ギャラリー） -->
+<!-- デプロイ方法: 静的ホスティング（Netlify, Vercel, GitHub Pages等）でOK、ドメイン設定・SSLは別途 -->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ギャラリー | 麺匠 雅 - 店内の雰囲気と料理をご紹介</title>
+    <meta name="description" content="麺匠雅の店内の雰囲気と美味しい料理の写真をご紹介。落ち着いた空間で味わう本格ラーメンの魅力をご覧ください。成瀬駅徒歩3分の上質なラーメン店。">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ギャラリー | 麺匠 雅 - 店内の雰囲気と料理をご紹介">
+    <meta property="og:description" content="麺匠雅の店内の雰囲気と美味しい料理の写真をご紹介。落ち着いた空間で味わう本格ラーメンの魅力をご覧ください。">
+    <meta property="og:image" content="image/jason-leung-X_-utfkjE7Y-unsplash.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ギャラリー | 麺匠 雅 - 店内の雰囲気と料理をご紹介">
+    <meta name="twitter:description" content="麺匠雅の店内の雰囲気と美味しい料理の写真をご紹介。落ち着いた空間で味わう本格ラーメンの魅力をご覧ください。">
+    <meta name="twitter:image" content="image/jason-leung-X_-utfkjE7Y-unsplash.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="index.html" class="nav__logo">
+                    <span class="nav__logo-text">麺匠 雅</span>
+                </a>
+                <button class="nav__toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">ホーム</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">メニュー</a></li>
+                    <li class="nav__item"><a href="gallery.html" class="nav__link nav__link--active">ギャラリー</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">アクセス・予約</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ページヘッダー -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">ギャラリー</h1>
+                <p class="page-header__subtitle">
+                    上質な空間と美味しい料理の魅力をご覧ください
+                </p>
+            </div>
+        </section>
+
+        <!-- ギャラリーセクション -->
+        <section class="gallery">
+            <div class="container">
+                <!-- 店内の雰囲気 -->
+                <div class="gallery__section">
+                    <h2 class="gallery__section-title">店内の雰囲気</h2>
+                    <p class="gallery__section-description">
+                        木の温もりを感じる落ち着いた空間で、ゆったりとお食事をお楽しみいただけます
+                    </p>
+                    <div class="gallery__grid">
+                        <div class="gallery__item" data-category="interior">
+                            <img src="image/matthew-hamilton-RA4mwm9_jKA-unsplash.jpg" 
+                                 alt="麺匠雅のカウンター席 - 木の温もりを感じる上質な空間" 
+                                 loading="lazy"
+                                 srcset="image/matthew-hamilton-RA4mwm9_jKA-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">カウンター席</h3>
+                                <p class="gallery__item-description">職人の技を間近で見ながらお食事を</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery__item" data-category="interior">
+                            <img src="image/peyman-shojaei-WYx8dQlj8AA-unsplash.jpg" 
+                                 alt="麺匠雅のテーブル席 - ゆったりとした4人掛けテーブル" 
+                                 loading="lazy"
+                                 srcset="image/peyman-shojaei-WYx8dQlj8AA-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">テーブル席</h3>
+                                <p class="gallery__item-description">ご家族やお友達とゆっくりと</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery__item" data-category="interior">
+                            <img src="image/jason-leung-X_-utfkjE7Y-unsplash.jpg" 
+                                 alt="麺匠雅の店内全景 - 落ち着いた照明と木の内装" 
+                                 loading="lazy"
+                                 srcset="image/jason-leung-X_-utfkjE7Y-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">店内全景</h3>
+                                <p class="gallery__item-description">落ち着いた照明と木の内装</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery__item" data-category="interior">
+                            <img src="image/daniel-stiel-YFU0AvczmLk-unsplash.jpg" 
+                                 alt="麺匠雅の厨房 - 清潔で整理された調理場" 
+                                 loading="lazy"
+                                 srcset="image/daniel-stiel-YFU0AvczmLk-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">厨房</h3>
+                                <p class="gallery__item-description">清潔で整理された調理場</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery__item" data-category="interior">
+                            <img src="image/capture-moments-BffM3bpPhL0-unsplash.jpg" 
+                                 alt="麺匠雅の外観 - 成瀬駅徒歩3分の立地" 
+                                 loading="lazy"
+                                 srcset="image/capture-moments-BffM3bpPhL0-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">外観</h3>
+                                <p class="gallery__item-description">成瀬駅徒歩3分の好立地</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery__item" data-category="interior">
+                            <img src="image/anton-nazaretian-JCHlsKSgbSk-unsplash.jpg" 
+                                 alt="麺匠雅の入口 - 上品な暖簾と看板" 
+                                 loading="lazy"
+                                 srcset="image/anton-nazaretian-JCHlsKSgbSk-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">入口</h3>
+                                <p class="gallery__item-description">上品な暖簾がお出迎え</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 料理 -->
+                <div class="gallery__section">
+                    <h2 class="gallery__section-title">こだわりの料理</h2>
+                    <p class="gallery__section-description">
+                        職人が丹精込めて作り上げる、美しく美味しい料理の数々をご覧ください
+                    </p>
+                    <div class="gallery__grid">
+                        <div class="gallery__item" data-category="food">
+                            <img src="image/jason-leung-X_-utfkjE7Y-unsplash.jpg" 
+                                 alt="雅ラーメン - 麺匠雅の看板メニュー、美しく盛り付けられた一杯" 
+                                 loading="lazy"
+                                 srcset="image/jason-leung-X_-utfkjE7Y-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">雅ラーメン</h3>
+                                <p class="gallery__item-description">看板メニューの美しい仕上がり</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery__item" data-category="food">
+                            <img src="image/aditya-romansa-m6p4lqWxfy0-unsplash.jpg" 
+                                 alt="特製醤油ラーメン - 澄んだスープと美しいトッピング" 
+                                 loading="lazy"
+                                 srcset="image/aditya-romansa-m6p4lqWxfy0-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">特製醤油ラーメン</h3>
+                                <p class="gallery__item-description">澄んだスープの上品な一杯</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery__item" data-category="food">
+                            <img src="image/daniel-stiel-YFU0AvczmLk-unsplash.jpg" 
+                                 alt="つけ麺 - 濃厚スープと太麺の絶妙な組み合わせ" 
+                                 loading="lazy"
+                                 srcset="image/daniel-stiel-YFU0AvczmLk-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">つけ麺</h3>
+                                <p class="gallery__item-description">濃厚スープと太麺の絶妙な組み合わせ</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery__item" data-category="food">
+                            <img src="image/benoit-deschasaux-J716uEG9eLI-unsplash.jpg" 
+                                 alt="雅餃子 - 自家製の特製餃子、美しく焼き上げられた5個" 
+                                 loading="lazy"
+                                 srcset="image/benoit-deschasaux-J716uEG9eLI-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">雅餃子</h3>
+                                <p class="gallery__item-description">自家製の特製餃子</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery__item" data-category="food">
+                            <img src="image/capture-moments-BffM3bpPhL0-unsplash.jpg" 
+                                 alt="チャーシュー丼 - 特製チャーシューがたっぷりの贅沢な丼" 
+                                 loading="lazy"
+                                 srcset="image/capture-moments-BffM3bpPhL0-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">チャーシュー丼</h3>
+                                <p class="gallery__item-description">特製チャーシューの贅沢な丼</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery__item" data-category="food">
+                            <img src="image/ashutosh-gupta-mRlknYSlFLI-unsplash.jpg" 
+                                 alt="麺打ち風景 - 職人が毎朝打つ自家製麺の製造過程" 
+                                 loading="lazy"
+                                 srcset="image/ashutosh-gupta-mRlknYSlFLI-unsplash.jpg 800w"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw">
+                            <div class="gallery__item-overlay">
+                                <h3 class="gallery__item-title">麺打ち風景</h3>
+                                <p class="gallery__item-description">毎朝打つ自家製麺</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- フィルターボタン -->
+                <div class="gallery__filters">
+                    <button class="gallery__filter gallery__filter--active" data-filter="all">すべて</button>
+                    <button class="gallery__filter" data-filter="interior">店内</button>
+                    <button class="gallery__filter" data-filter="food">料理</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA セクション -->
+        <section class="cta">
+            <div class="container">
+                <h2 class="cta__title">実際にご体験ください</h2>
+                <p class="cta__description">
+                    写真でご覧いただいた上質な空間と美味しい料理を、<br>
+                    ぜひ実際にご体験ください。心よりお待ちしております。
+                </p>
+                <div class="cta__buttons">
+                    <a href="menu.html" class="btn btn--secondary">メニューを見る</a>
+                    <a href="contact.html" class="btn btn--primary">ご予約・アクセス</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- モーダル -->
+    <div class="modal" id="imageModal" aria-hidden="true">
+        <div class="modal__overlay">
+            <div class="modal__content">
+                <button class="modal__close" aria-label="モーダルを閉じる">&times;</button>
+                <img class="modal__image" src="" alt="">
+                <div class="modal__info">
+                    <h3 class="modal__title"></h3>
+                    <p class="modal__description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <h3 class="footer__title">麺匠 雅</h3>
+                    <p class="footer__address">
+                        〒194-0043<br>
+                        東京都町田市成瀬台1-2-3 雅ビル1F<br>
+                        JR横浜線 成瀬駅 徒歩3分
+                    </p>
+                    <p class="footer__phone">TEL: 042-123-4567</p>
+                </div>
+                <div class="footer__hours">
+                    <h4 class="footer__subtitle">営業時間</h4>
+                    <p>ランチ: 11:30〜15:00 (L.O. 14:30)</p>
+                    <p>ディナー: 18:00〜22:00 (L.O. 21:30)</p>
+                    <p class="footer__closed">定休日: 火曜日</p>
+                </div>
+                <div class="footer__social">
+                    <h4 class="footer__subtitle">フォローする</h4>
+                    <div class="footer__social-links">
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 麺匠 雅. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

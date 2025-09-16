@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- このファイルの用途: アクセス・予約ページ（地図埋め込みプレースホルダ、予約フォーム） -->
+<!-- デプロイ方法: 静的ホスティング（Netlify, Vercel, GitHub Pages等）でOK、ドメイン設定・SSLは別途 -->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アクセス・ご予約 | 麺匠 雅 - 成瀬駅徒歩3分の本格ラーメン店</title>
+    <meta name="description" content="麺匠雅へのアクセス情報とご予約フォーム。成瀬駅徒歩3分、営業時間11:30-15:00、18:00-22:00。お電話またはWebからご予約承ります。TEL: 042-123-4567">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="アクセス・ご予約 | 麺匠 雅 - 成瀬駅徒歩3分の本格ラーメン店">
+    <meta property="og:description" content="麺匠雅へのアクセス情報とご予約フォーム。成瀬駅徒歩3分、営業時間11:30-15:00、18:00-22:00。お電話またはWebからご予約承ります。">
+    <meta property="og:image" content="image/jason-leung-X_-utfkjE7Y-unsplash.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="アクセス・ご予約 | 麺匠 雅 - 成瀬駅徒歩3分の本格ラーメン店">
+    <meta name="twitter:description" content="麺匠雅へのアクセス情報とご予約フォーム。成瀬駅徒歩3分、営業時間11:30-15:00、18:00-22:00。お電話またはWebからご予約承ります。">
+    <meta name="twitter:image" content="image/jason-leung-X_-utfkjE7Y-unsplash.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="index.html" class="nav__logo">
+                    <span class="nav__logo-text">麺匠 雅</span>
+                </a>
+                <button class="nav__toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">ホーム</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">メニュー</a></li>
+                    <li class="nav__item"><a href="gallery.html" class="nav__link">ギャラリー</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link nav__link--active">アクセス・予約</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ページヘッダー -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">アクセス・ご予約</h1>
+                <p class="page-header__subtitle">
+                    成瀬駅徒歩3分。お気軽にお越しください
+                </p>
+            </div>
+        </section>
+
+        <!-- アクセス情報 -->
+        <section class="access">
+            <div class="container">
+                <div class="access__content">
+                    <div class="access__info">
+                        <h2 class="section-title">店舗情報</h2>
+                        <div class="access__details">
+                            <div class="access__item">
+                                <h3 class="access__item-title">住所</h3>
+                                <p class="access__item-content">
+                                    〒194-0043<br>
+                                    東京都町田市成瀬台1-2-3 雅ビル1F
+                                </p>
+                            </div>
+                            <div class="access__item">
+                                <h3 class="access__item-title">アクセス</h3>
+                                <p class="access__item-content">
+                                    JR横浜線 成瀬駅 東口より徒歩3分<br>
+                                    成瀬街道沿い、ファミリーマート隣
+                                </p>
+                            </div>
+                            <div class="access__item">
+                                <h3 class="access__item-title">電話番号</h3>
+                                <p class="access__item-content">
+                                    <a href="tel:042-123-4567" class="access__phone">042-123-4567</a>
+                                </p>
+                            </div>
+                            <div class="access__item">
+                                <h3 class="access__item-title">営業時間</h3>
+                                <p class="access__item-content">
+                                    ランチ: 11:30〜15:00 (L.O. 14:30)<br>
+                                    ディナー: 18:00〜22:00 (L.O. 21:30)
+                                </p>
+                            </div>
+                            <div class="access__item">
+                                <h3 class="access__item-title">定休日</h3>
+                                <p class="access__item-content">火曜日</p>
+                            </div>
+                            <div class="access__item">
+                                <h3 class="access__item-title">席数</h3>
+                                <p class="access__item-content">
+                                    カウンター8席、テーブル16席（4人掛け×4卓）<br>
+                                    合計24席
+                                </p>
+                            </div>
+                            <div class="access__item">
+                                <h3 class="access__item-title">駐車場</h3>
+                                <p class="access__item-content">
+                                    専用駐車場3台完備<br>
+                                    ※満車の場合は近隣のコインパーキングをご利用ください
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="access__map">
+                        <h3 class="access__map-title">地図</h3>
+                        <div class="access__map-container">
+                            <!-- 実際の実装では Google Maps や他の地図サービスを埋め込み -->
+                            <div class="access__map-placeholder">
+                                <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <p>地図を表示</p>
+                                <small>※実装時にGoogle Mapsなどの地図サービスを埋め込み</small>
+                            </div>
+                        </div>
+                        <p class="access__map-note">
+                            成瀬駅東口を出て成瀬街道を町田方面へ直進、<br>
+                            ファミリーマート隣の雅ビル1階です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">よくあるご質問</h2>
+                <div class="faq__items">
+                    <div class="faq__item">
+                        <button class="faq__question" aria-expanded="false">
+                            <span>予約は必要ですか？</span>
+                            <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
+                        </button>
+                        <div class="faq__answer">
+                            <p>
+                                予約なしでもお席に空きがあればご案内いたしますが、
+                                確実にお席をご用意するため事前のご予約をおすすめしております。
+                                お電話またはWebフォームからご予約ください。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__question" aria-expanded="false">
+                            <span>アレルギー対応はしていますか？</span>
+                            <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
+                        </button>
+                        <div class="faq__answer">
+                            <p>
+                                アレルギーをお持ちの方は、ご来店時またはご予約時にお申し付けください。
+                                可能な限り対応させていただきますが、調理器具や調理場の関係で
+                                完全な除去が困難な場合もございます。詳しくはスタッフまでお尋ねください。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__question" aria-expanded="false">
+                            <span>子供連れでも利用できますか？</span>
+                            <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"/>
+                            </svg>
+                        </button>
+                        <div class="faq__answer">
+                            <p>
+                                もちろんお子様連れでもご利用いただけます。
+                                テーブル席をご用意しておりますので、ご家族でゆっくりとお食事をお楽しみください。
+                                お子様用の椅子もご用意しております。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 予約フォーム -->
+        <section class="reservation">
+            <div class="container">
+                <h2 class="section-title">ご予約フォーム</h2>
+                <p class="reservation__description">
+                    下記フォームからご予約いただけます。<br>
+                    お急ぎの場合はお電話（042-123-4567）でも承ります。
+                </p>
+                <form class="reservation__form" id="reservationForm" novalidate>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="name" class="form__label">お名前 <span class="form__required">*</span></label>
+                            <input type="text" id="name" name="name" class="form__input" required aria-describedby="name-error">
+                            <div class="form__error" id="name-error"></div>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone" class="form__label">電話番号 <span class="form__required">*</span></label>
+                            <input type="tel" id="phone" name="phone" class="form__input" required aria-describedby="phone-error">
+                            <div class="form__error" id="phone-error"></div>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="date" class="form__label">来店希望日 <span class="form__required">*</span></label>
+                            <input type="date" id="date" name="date" class="form__input" required aria-describedby="date-error">
+                            <div class="form__error" id="date-error"></div>
+                        </div>
+                        <div class="form__group">
+                            <label for="time" class="form__label">来店希望時間 <span class="form__required">*</span></label>
+                            <select id="time" name="time" class="form__select" required aria-describedby="time-error">
+                                <option value="">時間を選択してください</option>
+                                <optgroup label="ランチタイム">
+                                    <option value="11:30">11:30</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="14:30">14:30</option>
+                                </optgroup>
+                                <optgroup label="ディナータイム">
+                                    <option value="18:00">18:00</option>
+                                    <option value="18:30">18:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="21:30">21:30</option>
+                                </optgroup>
+                            </select>
+                            <div class="form__error" id="time-error"></div>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="guests" class="form__label">人数 <span class="form__required">*</span></label>
+                            <select id="guests" name="guests" class="form__select" required aria-describedby="guests-error">
+                                <option value="">人数を選択してください</option>
+                                <option value="1">1名</option>
+                                <option value="2">2名</option>
+                                <option value="3">3名</option>
+                                <option value="4">4名</option>
+                                <option value="5">5名</option>
+                                <option value="6">6名</option>
+                                <option value="7">7名</option>
+                                <option value="8">8名以上（要相談）</option>
+                            </select>
+                            <div class="form__error" id="guests-error"></div>
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">メールアドレス</label>
+                            <input type="email" id="email" name="email" class="form__input" aria-describedby="email-error">
+                            <div class="form__error" id="email-error"></div>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="requests" class="form__label">ご要望・アレルギー等</label>
+                        <textarea id="requests" name="requests" class="form__textarea" rows="4" placeholder="アレルギー、席のご希望、その他ご要望がございましたらお書きください"></textarea>
+                    </div>
+                    <div class="form__submit">
+                        <button type="submit" class="btn btn--primary btn--large">予約を送信する</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 成功モーダル -->
+    <div class="modal" id="successModal" aria-hidden="true">
+        <div class="modal__overlay">
+            <div class="modal__content modal__content--success">
+                <div class="modal__icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22,4 12,14.01 9,11.01"/>
+                    </svg>
+                </div>
+                <h3 class="modal__title">ご予約ありがとうございます</h3>
+                <p class="modal__message">
+                    ご予約を承りました。<br>
+                    確認のお電話をさせていただく場合がございます。<br>
+                    ご来店を心よりお待ちしております。
+                </p>
+                <button class="btn btn--primary" onclick="closeModal('successModal')">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- エラーモーダル -->
+    <div class="modal" id="errorModal" aria-hidden="true">
+        <div class="modal__overlay">
+            <div class="modal__content modal__content--error">
+                <div class="modal__icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="15" y1="9" x2="9" y2="15"/>
+                        <line x1="9" y1="9" x2="15" y2="15"/>
+                    </svg>
+                </div>
+                <h3 class="modal__title">送信エラー</h3>
+                <p class="modal__message">
+                    申し訳ございません。送信中にエラーが発生しました。<br>
+                    お手数ですが、お電話（042-123-4567）にてご予約ください。
+                </p>
+                <button class="btn btn--primary" onclick="closeModal('errorModal')">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <h3 class="footer__title">麺匠 雅</h3>
+                    <p class="footer__address">
+                        〒194-0043<br>
+                        東京都町田市成瀬台1-2-3 雅ビル1F<br>
+                        JR横浜線 成瀬駅 徒歩3分
+                    </p>
+                    <p class="footer__phone">TEL: 042-123-4567</p>
+                </div>
+                <div class="footer__hours">
+                    <h4 class="footer__subtitle">営業時間</h4>
+                    <p>ランチ: 11:30〜15:00 (L.O. 14:30)</p>
+                    <p>ディナー: 18:00〜22:00 (L.O. 21:30)</p>
+                    <p class="footer__closed">定休日: 火曜日</p>
+                </div>
+                <div class="footer__social">
+                    <h4 class="footer__subtitle">フォローする</h4>
+                    <div class="footer__social-links">
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 麺匠 雅. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

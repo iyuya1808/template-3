@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!-- このファイルの用途: メニューページ（複数カテゴリ＋価格＋説明） -->
+<!-- デプロイ方法: 静的ホスティング（Netlify, Vercel, GitHub Pages等）でOK、ドメイン設定・SSLは別途 -->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メニュー | 麺匠 雅 - 自家製麺と特製スープの本格ラーメン</title>
+    <meta name="description" content="麺匠雅のメニューをご紹介。自家製麺と18時間煮込んだ特製スープの雅ラーメンをはじめ、厳選した食材を使用した本格ラーメンとサイドメニューをご用意しています。">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="メニュー | 麺匠 雅 - 自家製麺と特製スープの本格ラーメン">
+    <meta property="og:description" content="麺匠雅のメニューをご紹介。自家製麺と18時間煮込んだ特製スープの雅ラーメンをはじめ、厳選した食材を使用した本格ラーメンとサイドメニューをご用意。">
+    <meta property="og:image" content="image/jason-leung-X_-utfkjE7Y-unsplash.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="メニュー | 麺匠 雅 - 自家製麺と特製スープの本格ラーメン">
+    <meta name="twitter:description" content="麺匠雅のメニューをご紹介。自家製麺と18時間煮込んだ特製スープの雅ラーメンをはじめ、厳選した食材を使用した本格ラーメンとサイドメニューをご用意。">
+    <meta name="twitter:image" content="image/jason-leung-X_-utfkjE7Y-unsplash.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="index.html" class="nav__logo">
+                    <span class="nav__logo-text">麺匠 雅</span>
+                </a>
+                <button class="nav__toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">ホーム</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link nav__link--active">メニュー</a></li>
+                    <li class="nav__item"><a href="gallery.html" class="nav__link">ギャラリー</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">アクセス・予約</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ページヘッダー -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">メニュー</h1>
+                <p class="page-header__subtitle">
+                    職人が丹精込めて作り上げる、こだわりの一杯をご堪能ください
+                </p>
+            </div>
+        </section>
+
+        <!-- メニューセクション -->
+        <section class="menu">
+            <div class="container">
+                <!-- ラーメン -->
+                <div class="menu__category">
+                    <h2 class="menu__category-title">ラーメン</h2>
+                    <p class="menu__category-description">
+                        毎朝店内で打つ自家製麺と、18時間以上煮込んだ特製スープが織りなす至極の味わい
+                    </p>
+                    <div class="menu__items">
+                        <article class="menu-item">
+                            <div class="menu-item__image">
+                                <img src="image/jason-leung-X_-utfkjE7Y-unsplash.jpg" 
+                                     alt="雅ラーメン - 麺匠雅の看板メニュー" 
+                                     loading="lazy"
+                                     srcset="image/jason-leung-X_-utfkjE7Y-unsplash.jpg 300w"
+                                     sizes="(max-width: 768px) 150px, 300px">
+                            </div>
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">雅ラーメン</h3>
+                                    <span class="menu-item__price">¥1,380</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    当店の看板メニュー。豚骨と鶏ガラを18時間煮込んだ濃厚スープに、
+                                    秘伝のタレを合わせた奥深い味わい。自家製中太麺との相性は抜群です。
+                                    チャーシュー、メンマ、ネギ、海苔をトッピング。
+                                </p>
+                                <div class="menu-item__tags">
+                                    <span class="menu-item__tag">看板メニュー</span>
+                                    <span class="menu-item__tag">自家製麺</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item__image">
+                                <img src="image/aditya-romansa-m6p4lqWxfy0-unsplash.jpg" 
+                                     alt="特製醤油ラーメン - 上品な醤油の香りが際立つ一杯" 
+                                     loading="lazy"
+                                     srcset="image/aditya-romansa-m6p4lqWxfy0-unsplash.jpg 300w"
+                                     sizes="(max-width: 768px) 150px, 300px">
+                            </div>
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">特製醤油ラーメン</h3>
+                                    <span class="menu-item__price">¥1,480</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    厳選した醤油をブレンドした上品な醤油ダレと、
+                                    鶏ガラベースの澄んだスープが織りなす洗練された味わい。
+                                    特製チャーシュー、味玉、メンマ、三つ葉をトッピング。
+                                </p>
+                                <div class="menu-item__tags">
+                                    <span class="menu-item__tag">特製</span>
+                                    <span class="menu-item__tag">醤油</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item__image">
+                                <img src="image/ashutosh-gupta-mRlknYSlFLI-unsplash.jpg" 
+                                     alt="濃厚味噌ラーメン - コクと旨味が凝縮された味噌ラーメン" 
+                                     loading="lazy"
+                                     srcset="image/ashutosh-gupta-mRlknYSlFLI-unsplash.jpg 300w"
+                                     sizes="(max-width: 768px) 150px, 300px">
+                            </div>
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">濃厚味噌ラーメン</h3>
+                                    <span class="menu-item__price">¥1,450</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    信州産の上質な味噌を使用し、豚骨スープと合わせた
+                                    コクと旨味が凝縮された一杯。太麺との絡みも絶妙で、
+                                    もやし、コーン、チャーシューがトッピングされています。
+                                </p>
+                                <div class="menu-item__tags">
+                                    <span class="menu-item__tag">味噌</span>
+                                    <span class="menu-item__tag">濃厚</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item__image">
+                                <img src="image/peyman-shojaei-WYx8dQlj8AA-unsplash.jpg" 
+                                     alt="塩ラーメン - あっさりとした上品な塩味" 
+                                     loading="lazy"
+                                     srcset="image/peyman-shojaei-WYx8dQlj8AA-unsplash.jpg 300w"
+                                     sizes="(max-width: 768px) 150px, 300px">
+                            </div>
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">塩ラーメン</h3>
+                                    <span class="menu-item__price">¥1,280</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    鶏ガラと野菜の旨味を活かした透明感のあるスープに、
+                                    天然塩で仕上げたあっさりとした上品な味わい。
+                                    レアチャーシュー、メンマ、ワカメ、ネギをトッピング。
+                                </p>
+                                <div class="menu-item__tags">
+                                    <span class="menu-item__tag">塩</span>
+                                    <span class="menu-item__tag">あっさり</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="menu-item">
+                            <div class="menu-item__image">
+                                <img src="image/daniel-stiel-YFU0AvczmLk-unsplash.jpg" 
+                                     alt="つけ麺 - 濃厚スープと太麺の絶妙な組み合わせ" 
+                                     loading="lazy"
+                                     srcset="image/daniel-stiel-YFU0AvczmLk-unsplash.jpg 300w"
+                                     sizes="(max-width: 768px) 150px, 300px">
+                            </div>
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">つけ麺</h3>
+                                    <span class="menu-item__price">¥1,580</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    濃厚な豚骨魚介スープに太麺をつけて味わう贅沢な一品。
+                                    麺の食感とスープの濃厚さが絶妙にマッチします。
+                                    特製チャーシュー、味玉、メンマ付き。
+                                </p>
+                                <div class="menu-item__tags">
+                                    <span class="menu-item__tag">つけ麺</span>
+                                    <span class="menu-item__tag">濃厚</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- サイドメニュー -->
+                <div class="menu__category">
+                    <h2 class="menu__category-title">サイドメニュー</h2>
+                    <p class="menu__category-description">
+                        ラーメンと一緒にお楽しみいただける、こだわりのサイドメニュー
+                    </p>
+                    <div class="menu__items">
+                        <article class="menu-item menu-item--side">
+                            <div class="menu-item__image">
+                                <img src="image/benoit-deschasaux-J716uEG9eLI-unsplash.jpg" 
+                                     alt="雅餃子 - 自家製の特製餃子" 
+                                     loading="lazy"
+                                     srcset="image/benoit-deschasaux-J716uEG9eLI-unsplash.jpg 200w"
+                                     sizes="(max-width: 768px) 100px, 200px">
+                            </div>
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">雅餃子（5個）</h3>
+                                    <span class="menu-item__price">¥680</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    国産豚肉と新鮮な野菜を使用した自家製餃子。
+                                    皮はもちもち、中身はジューシーな仕上がりです。
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="menu-item menu-item--side">
+                            <div class="menu-item__image">
+                                <img src="image/capture-moments-BffM3bpPhL0-unsplash.jpg" 
+                                     alt="チャーシュー丼 - 特製チャーシューの丼" 
+                                     loading="lazy"
+                                     srcset="image/capture-moments-BffM3bpPhL0-unsplash.jpg 200w"
+                                     sizes="(max-width: 768px) 100px, 200px">
+                            </div>
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">チャーシュー丼</h3>
+                                    <span class="menu-item__price">¥780</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    低温調理��仕上げた特製チャーシューを
+                                    特製ダレで味付けした贅沢な丼。ご飯との相性抜群。
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="menu-item menu-item--side">
+                            <div class="menu-item__image">
+                                <img src="image/anton-nazaretian-JCHlsKSgbSk-unsplash.jpg" 
+                                     alt="半熟味玉 - 特製醤油ダレに漬け込んだ味玉" 
+                                     loading="lazy"
+                                     srcset="image/anton-nazaretian-JCHlsKSgbSk-unsplash.jpg 200w"
+                                     sizes="(max-width: 768px) 100px, 200px">
+                            </div>
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">半熟味玉（2個）</h3>
+                                    <span class="menu-item__price">¥380</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    特製醤油ダレに一晩漬け込んだ半熟卵。
+                                    とろりとした黄身と程よい塩味が絶品です。
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- ドリンク -->
+                <div class="menu__category">
+                    <h2 class="menu__category-title">ドリンク</h2>
+                    <p class="menu__category-description">
+                        お食事と一緒にお楽しみいただける、厳選したドリンク
+                    </p>
+                    <div class="menu__items">
+                        <article class="menu-item menu-item--drink">
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">生ビール（アサヒスーパードライ）</h3>
+                                    <span class="menu-item__price">¥580</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    キリッと冷えた生ビール。ラーメンとの相性も抜群です。
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="menu-item menu-item--drink">
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">ウーロン茶</h3>
+                                    <span class="menu-item__price">¥280</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    さっぱりとしたウーロン茶。油っぽい料理との相性が良く、
+                                    お口をリフレッシュしてくれます。
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="menu-item menu-item--drink">
+                            <div class="menu-item__content">
+                                <div class="menu-item__header">
+                                    <h3 class="menu-item__name">オレンジジュース</h3>
+                                    <span class="menu-item__price">¥320</span>
+                                </div>
+                                <p class="menu-item__description">
+                                    100%果汁のフレッシュなオレンジジュース。
+                                    お子様にも人気の一品です。
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- 注意事項 -->
+                <div class="menu__notes">
+                    <h3 class="menu__notes-title">ご注意</h3>
+                    <ul class="menu__notes-list">
+                        <li>価格は税込み表示です</li>
+                        <li>麺の硬さ、スープの濃さはお好みに応じて調整いたします</li>
+                        <li>アレルギーをお持ちの方は事前にお申し付けください</li>
+                        <li>大盛り（麺1.5倍）は＋200円で承ります</li>
+                        <li>替え玉は＋150円で承ります（つけ麺除く）</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA セクション -->
+        <section class="cta">
+            <div class="container">
+                <h2 class="cta__title">ご来店をお待ちしております</h2>
+                <p class="cta__description">
+                    こだわりの一杯を、落ち着いた空間でゆっくりとお楽しみください。<br>
+                    ご予約も承っております。
+                </p>
+                <div class="cta__buttons">
+                    <a href="gallery.html" class="btn btn--secondary">店内を見る</a>
+                    <a href="contact.html" class="btn btn--primary">ご予約・アクセス</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <h3 class="footer__title">麺匠 雅</h3>
+                    <p class="footer__address">
+                        〒194-0043<br>
+                        東京都町田市成瀬台1-2-3 雅ビル1F<br>
+                        JR横浜線 成瀬駅 徒歩3分
+                    </p>
+                    <p class="footer__phone">TEL: 042-123-4567</p>
+                </div>
+                <div class="footer__hours">
+                    <h4 class="footer__subtitle">営業時間</h4>
+                    <p>ランチ: 11:30〜15:00 (L.O. 14:30)</p>
+                    <p>ディナー: 18:00〜22:00 (L.O. 21:30)</p>
+                    <p class="footer__closed">定休日: 火曜日</p>
+                </div>
+                <div class="footer__social">
+                    <h4 class="footer__subtitle">フォローする</h4>
+                    <div class="footer__social-links">
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 麺匠 雅. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

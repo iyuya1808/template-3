@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!-- DEMO — 非公開プレゼン用 -->
+<!-- このファイルの用途: トップページ（店舗の魅力・キャッチ・予約導線） -->
+<!-- デプロイ方法: 静的ホスティング（Netlify, Vercel, GitHub Pages等）でOK、ドメイン設定・SSLは別途 -->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麺匠 雅 - 本格ラーメンと上質なひととき | 成瀬駅徒歩3分</title>
+    <meta name="description" content="成瀬駅徒歩3分の本格ラーメン店「麺匠 雅」。自家製麺と特製スープで織りなす至極の一杯をご提供。上質な空間でゆったりとお食事をお楽しみください。">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="麺匠 雅 - 本格ラーメンと上質なひととき">
+    <meta property="og:description" content="成瀬駅徒歩3分の本格ラーメン店。自家製麺と特製スープで織りなす至極の一杯をご提供。">
+    <meta property="og:image" content="image/jason-leung-X_-utfkjE7Y-unsplash.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="麺匠 雅 - 本格ラーメンと上質なひととき">
+    <meta name="twitter:description" content="成瀬駅徒歩3分の本格ラーメン店。自家製麺と特製スープで織りなす至極の一杯をご提供。">
+    <meta name="twitter:image" content="image/jason-leung-X_-utfkjE7Y-unsplash.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "麺匠 雅",
+        "description": "本格ラーメンと上質なひとときを提供する成瀬のラーメン店",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "成瀬台1-2-3 雅ビル1F",
+            "addressLocality": "町田市",
+            "addressRegion": "東京都",
+            "postalCode": "194-0043",
+            "addressCountry": "JP"
+        },
+        "telephone": "042-123-4567",
+        "openingHours": [
+            "Mo-Su 11:30-15:00",
+            "Mo-Su 18:00-22:00"
+        ],
+        "priceRange": "¥¥",
+        "servesCuisine": "Japanese",
+        "hasMenu": {
+            "@type": "Menu",
+            "hasMenuSection": [
+                {
+                    "@type": "MenuSection",
+                    "name": "ラーメン",
+                    "hasMenuItem": [
+                        {
+                            "@type": "MenuItem",
+                            "name": "雅ラーメン",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "1380",
+                                "priceCurrency": "JPY"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="index.html" class="nav__logo">
+                    <span class="nav__logo-text">麺匠 雅</span>
+                </a>
+                <button class="nav__toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="index.html" class="nav__link nav__link--active">ホーム</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">メニュー</a></li>
+                    <li class="nav__item"><a href="gallery.html" class="nav__link">ギャラリー</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">アクセス・予約</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">麺匠 雅</h1>
+                <p class="hero__subtitle">本格ラーメンと上質なひととき</p>
+                <p class="hero__description">
+                    職人が丹精込めて作り上げる自家製麺と、<br>
+                    長時間煮込んだ特製スープが織りなす至極の一杯
+                </p>
+                <a href="contact.html" class="hero__cta">ご予約はこちら</a>
+            </div>
+            <div class="hero__image">
+                <img src="image/jason-leung-X_-utfkjE7Y-unsplash.jpg" 
+                     alt="麺匠雅の看板メニュー、雅ラーメン" 
+                     loading="lazy"
+                     srcset="image/jason-leung-X_-utfkjE7Y-unsplash.jpg 800w"
+                     sizes="(max-width: 768px) 100vw, 50vw">
+            </div>
+        </section>
+
+        <!-- 特徴セクション -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">雅が選ばれる理由</h2>
+                <div class="features__grid">
+                    <article class="feature">
+                        <div class="feature__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">自家製麺へのこだわり</h3>
+                        <p class="feature__description">
+                            毎朝店内で打つ自家製麺は、小麦の風味を最大限に引き出すため、
+                            厳選した国産小麦を使用。コシと喉越しの絶妙なバランスを追求しています。
+                        </p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                <line x1="15" y1="9" x2="15.01" y2="9"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">特製スープの深い味わい</h3>
+                        <p class="feature__description">
+                            豚骨と鶏ガラを18時間以上煮込んだ濃厚なスープに、
+                            秘伝のタレを合わせることで生まれる、奥深く上品な味わいをお楽しみください。
+                        </p>
+                    </article>
+                    <article class="feature">
+                        <div class="feature__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9,22 9,12 15,12 15,22"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">落ち着いた空間</h3>
+                        <p class="feature__description">
+                            木の温もりを感じる店内は、一人でも、大切な方とでも、
+                            ゆったりとお食事をお楽しみいただける上質な空間を演出しています。
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- シェフ紹介 -->
+        <section class="chef">
+            <div class="container">
+                <div class="chef__content">
+                    <div class="chef__image">
+                        <img src="image/matthew-hamilton-RA4mwm9_jKA-unsplash.jpg" 
+                             alt="麺匠雅の店主、田中雅人" 
+                             loading="lazy"
+                             srcset="image/matthew-hamilton-RA4mwm9_jKA-unsplash.jpg 400w"
+                             sizes="(max-width: 768px) 200px, 400px">
+                    </div>
+                    <div class="chef__info">
+                        <h2 class="section-title">店主紹介</h2>
+                        <h3 class="chef__name">田中 雅人</h3>
+                        <p class="chef__title">麺匠 雅 店主</p>
+                        <p class="chef__bio">
+                            都内有名ラーメン店で15年の修行を積み、2018年に「麺匠 雅」を開店。
+                            「一杯のラーメンで心を満たす」をモットーに、素材選びから調理まで
+                            すべての工程に妥協を許さない姿勢で、お客様に最高の一杯をお届けしています。
+                        </p>
+                        <p class="chef__philosophy">
+                            「ラーメンは日本の文化。その文化を次世代に繋げていくことが私の使命です。」
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA セクション -->
+        <section class="cta">
+            <div class="container">
+                <h2 class="cta__title">至極の一杯をお楽しみください</h2>
+                <p class="cta__description">
+                    成瀬駅徒歩3分。落ち着いた空間で本格ラーメンをご堪能ください。<br>
+                    ご予約も承っております。
+                </p>
+                <div class="cta__buttons">
+                    <a href="menu.html" class="btn btn--secondary">メニューを見る</a>
+                    <a href="contact.html" class="btn btn--primary">ご予約・アクセス</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <h3 class="footer__title">麺匠 雅</h3>
+                    <p class="footer__address">
+                        〒194-0043<br>
+                        東京都町田市成瀬台1-2-3 雅ビル1F<br>
+                        JR横浜線 成瀬駅 徒歩3分
+                    </p>
+                    <p class="footer__phone">TEL: 042-123-4567</p>
+                </div>
+                <div class="footer__hours">
+                    <h4 class="footer__subtitle">営業時間</h4>
+                    <p>ランチ: 11:30〜15:00 (L.O. 14:30)</p>
+                    <p>ディナー: 18:00〜22:00 (L.O. 21:30)</p>
+                    <p class="footer__closed">定休日: 火曜日</p>
+                </div>
+                <div class="footer__social">
+                    <h4 class="footer__subtitle">フォローする</h4>
+                    <div class="footer__social-links">
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 麺匠 雅. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
