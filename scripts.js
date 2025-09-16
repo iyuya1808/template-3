@@ -98,23 +98,42 @@ function initGalleryFilter() {
     
     if (!filterButtons.length || !galleryItems.length) return;
     
+    // 初期状態のaria-pressedを整備
+    filterButtons.forEach(btn => {
+        if (btn.classList.contains('gallery__filter--active')) {
+            btn.setAttribute('aria-pressed', 'true');
+        } else {
+            btn.setAttribute('aria-pressed', 'false');
+        }
+    });
+    
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
             const filter = this.getAttribute('data-filter');
             
             // アクティブボタンの切り替え
-            filterButtons.forEach(btn => btn.classList.remove('gallery__filter--active'));
+            filterButtons.forEach(btn => {
+                btn.classList.remove('gallery__filter--active');
+                btn.setAttribute('aria-pressed', 'false');
+            });
             this.classList.add('gallery__filter--active');
+            this.setAttribute('aria-pressed', 'true');
             
             // アイテムのフィルタリング
             galleryItems.forEach(item => {
                 const category = item.getAttribute('data-category');
                 
                 if (filter === 'all' || category === filter) {
-                    item.style.display = 'block';
+                    item.style.display = '';
+                    // 再度アニメーションを適用できるように一旦リセット
+                    item.style.animation = 'none';
+                    // リフローを強制してアニメーション再適用
+                    // eslint-disable-next-line no-unused-expressions
+                    item.offsetHeight;
                     item.style.animation = 'fadeInUp 0.5s ease-out';
                 } else {
                     item.style.display = 'none';
+                    item.style.animation = '';
                 }
             });
         });
@@ -140,7 +159,7 @@ function initGalleryModal() {
     galleryItems.forEach(item => {
         item.addEventListener('click', function() {
             const img = this.querySelector('img');
-            const overlay = this.querySelector('.gallery__item__overlay');
+            const overlay = this.querySelector('.gallery__item-overlay');
             
             if (!img || !overlay) return;
             
