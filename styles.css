@@ -543,7 +543,7 @@ button {
     transition: var(--transition);
 }
 
-.gallery__item__overlay {
+.gallery__item-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -555,7 +555,7 @@ button {
     transition: var(--transition);
 }
 
-.gallery__item:hover .gallery__item__overlay {
+.gallery__item:hover .gallery__item-overlay {
     transform: translateY(0);
 }
 
